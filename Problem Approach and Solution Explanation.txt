@@ -1,0 +1,41 @@
+Problem Approach and Solution Explanation -
+
+The objective of this assignment is to extract textual data articles from the given URL and perform text analysis to compute variables such as positive score, negative score, polarity score, subjectivity score, average sentence length, percentage of complex words, fog index, average words per sentence, complex word count, word count, syllables per word, personal pronouns, and average word length.
+
+- There were a couple of invalid URLs in the input file(no.36 and no.49) and i have handled them accordingly 
+- I have also used excluded the stopwords from the text analysis.
+
+
+Approach 
+
+1. Library Installation and Imports
+
+	Install necessary libraries: BeautifulSoup, requests, chardet, pandas, and openpyxl.
+	Importing these libraries for use in script.
+
+2. Uploading the Input file which contains the URLs and their IDs.
+
+3. Creating the scraping function to scrape the article from given URL while also handling any exceptions to manage the invalid urls.
+
+4. Iterate through the input dataFrame, scrape the articles, and save the valid ones to text files in an articles directory.Maintain a list of valid URLs for which scraping was successful.
+
+5. Uploading the positive and negative txt files and reading them properly.Uploading the stop words and detecting the encoding and reading them accordingly.
+
+6. Creating text analysis functions to calculate various metrics(ensuring to exclude stop words) (with help from the text analysis document).
+
+7. Computing Variables by processing each article
+
+8. Reordering the columns and then saving the results to csv file.
+
+
+
+Instructions 
+
+1.Setup Environment
+	- Ensure that you have python installed and also these libraries - beautifulsoup4,requests,chardet,pandas,openpyxl
+2.Place Input.xlsx, positive-words.txt, negative-words.txt, and the seven stop words files (StopWords_Auditor.txt, StopWords_Currencies.txt, etc.) in the same directory as the script.
+3.Execute the script
+4.I have used jupyter notebook and in that you can run each cell sequentially . if running the .py file then run it 
+	python blackcofferassignment.py
+5. Make sure all the files are correctly uploaded when prompted and check for messages in terminal.
+6. After the execution it will generate the csv file named text_analysis_results.csv containing the analyzed metrics in the format.
